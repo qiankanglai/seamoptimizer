@@ -7,7 +7,8 @@ using UnityEditor;
 public partial class SeamOptimizerGUI
 {
 	const float cosNormalThreshold = -1f;//0.99f;
-    const string optimizedSuffix = "_optimized";
+	const float lambda = 2f;
+	const string optimizedSuffix = "_optimized";
 
     class LightmappedMesh
     {
@@ -110,7 +111,7 @@ public partial class SeamOptimizerGUI
 			foreach (var seam in seams)
 #endif
 			{
-				if (!SeamOptimizer.so_seam_optimize(seam, pixels, lightmap.width, lightmap.height, 3, 0.9f))
+				if (!SeamOptimizer.so_seam_optimize(seam, pixels, lightmap.width, lightmap.height, 3, lambda))
 					Debug.LogWarning("Seam Optimize Failed");
 			}
 
