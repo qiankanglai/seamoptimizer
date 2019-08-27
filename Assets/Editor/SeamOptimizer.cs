@@ -289,7 +289,7 @@ class SeamOptimizer
 
 	static void so_seams_add_seam(List<so_seam_t> seams, Vector2 a0, Vector2 a1, Vector2 b0, Vector2 b1, Color[] data, int w, int h, int c)
 	{
-		Vector2 s = new Vector2(w, h);
+		Vector2 s = new Vector2(w-1, h-1);
         a0 = Extensions.Multiply(a0,s);
         a1 = Extensions.Multiply(a1,s);
         b0 = Extensions.Multiply(b0,s);
@@ -313,7 +313,7 @@ class SeamOptimizer
 			float t = i * step;
 			Vector2 a = a0 + ad * t;
 			Vector2 b = b0 + bd * t;
-            // Kanglai: shouldn't be Rount here
+            // Kanglai: shouldn't be Round here
             int ax = Mathf.FloorToInt(a.x), ay = Mathf.FloorToInt(a.y);
             int bx = Mathf.FloorToInt(b.x), by = Mathf.FloorToInt(b.y);
 			float au = a.x - ax, av = a.y - ay, nau = 1.0f - au, nav = 1.0f - av;

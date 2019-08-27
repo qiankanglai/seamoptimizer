@@ -81,7 +81,7 @@ public partial class SeamOptimizerGUI
 						{
 							int idx = side.texels[k].y * lightmap.width + side.texels[k].x;
 							//Debug.LogFormat("(" + side.texels[k].x + "," + side.texels[k].y + ")" + side.weights[k]);
-							Debug.Assert(side.weights[k] > 0);
+							//Debug.Assert(side.weights[k] > 0);
 							debugPixels[idx].r += side.weights[k];
 						}
 					}
