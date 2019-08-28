@@ -9,6 +9,8 @@ public partial class SeamOptimizerGUI
 	[MenuItem("SO/Visualize Mesh 2UV")]
 	static void Visualize2UV()
 	{
+		if (!CheckNonOptimizedLightmaps())
+			return;
 		var lightmapMappings = GatherLightmaps();
 		var mat = new Material(Shader.Find("Hidden/Draw2UV"));
 		var mat2 = new Material(Shader.Find("Hidden/DecodeLightmap"));
