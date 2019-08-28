@@ -1,6 +1,6 @@
 # seamoptimizer
 
-This is Unity port of [and/seampotimizer](https://github.com/ands/seamoptimizer). The idea comes from [Lighting Technology of „The Last Of Us”](http://miciwan.com/SIGGRAPH2013/Lighting Technology of The Last Of Us.pdf).
+This is Unity port of [and/seampotimizer](https://github.com/ands/seamoptimizer). The idea comes from [Lighting Technology of „The Last Of Us”](http://miciwan.com/SIGGRAPH2013/Lighting%20Technology%20of%20The%20Last%20Of%20Us.pdf).
 
 Unity has provided [Lightmap seam stitching](https://docs.unity3d.com/Manual/Lightmapping-SeamStitching.html) for its Progressive Lightmapper. You may also check that if you need this.
 
