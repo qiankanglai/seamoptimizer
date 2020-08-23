@@ -862,7 +862,9 @@ class SeamOptimizer
 
 			// write out results
 			for (int i = 0; i < n; i++)
-				data[texelsFlat[i].y * w + texelsFlat[i].x][ci] = x[i];
+			{
+				data[texelsFlat[i].y * w + texelsFlat[i].x][ci] = Mathf.Max(x[i], 0);
+			}
 		}
 
 		return true;
